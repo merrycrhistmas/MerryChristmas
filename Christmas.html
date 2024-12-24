@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Wishes</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://static.vecteezy.com/system/resources/previews/033/064/945/non_2x/christmas-border-frame-with-fir-tree-branches-generative-ai-photo.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .hidden {
+            opacity: 0;
+            transition: opacity 1.5s;
+        }
+
+        .fade-in {
+            opacity: 1;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .main-text {
+            font-size: 2em;
+            color: #b22222;
+            margin-bottom: 20px;
+        }
+
+        .secondary-text {
+            font-size: 1.5em;
+            color: #006400;
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 300px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-text hidden" id="mainText">Merry Christmas, Ya Filthy Animal!</div>
+        <img src="https://i.postimg.cc/y6yx0VHM/Cute-Hampter.png" alt="grizmas hampter wit a roze" class="hidden" id="image">
+        <div class="secondary-text hidden" id="secondaryText">Pace, fericire, iubire si virtute si multi bani sa ai ce fute!!!</div>
+    </div>
+
+    <script>
+        window.onload = () => {
+            const image = document.getElementById('image');
+            const mainText = document.getElementById('mainText');
+            const secondaryText = document.getElementById('secondaryText');
+
+            // Fade in the image first
+            setTimeout(() => {
+                image.classList.add('fade-in');
+            }, 500);
+
+            // Fade in the main text
+            setTimeout(() => {
+                mainText.classList.add('fade-in');
+            }, 2000);
+
+            // Fade in the secondary text
+            setTimeout(() => {
+                secondaryText.classList.add('fade-in');
+            }, 3500);
+        };
+    </script>
+</body>
+</html>
